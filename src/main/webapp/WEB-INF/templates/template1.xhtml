@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view contentType="text/html">
+
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<link rel="stylesheet" type="text/css" href="${request.contextPath}/resources/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="${request.contextPath}/resources/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="${request.contextPath}/resources/css/primefaces.css" />
+		<title>Nettalco</title>
+	</h:head>
+
+	<h:body>
+		<h:outputScript library="primefaces" name="jquery/jquery.js" />
+		<h:outputScript name="js/bootstrap.js" />
+
+		<nav class="navbar navbar-default sidebar" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-sidebar-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse"
+				id="bs-sidebar-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li>
+						<center>
+							<img src="../../resources/images/logo_positiva.png" style="margin-left: auto; margin-right: auto" />
+						</center>
+					</li>
+					<li class="active">
+						<h:link	style="color: #42426F; font-weight: bold;" value="Recomendaciones por Estado" /></li>
+					<li><h:link style="color: #42426F; font-weight: bold;"
+							value="Estado de Recomendaciones a una Fecha" /></li>
+					<li><h:link style="color: #42426F; font-weight: bold;"
+							value="Recomendaciones Implementadas a una Fecha" /></li>
+					<li><h:link style="color: #42426F; font-weight: bold;"
+							value="Estado de Recomendaciones por Área Involucrada" /></li>
+					<li><h:link style="color: #42426F; font-weight: bold;"
+							value="Pantalla 5" /></li>
+					<li><h:link style="color: #42426F; font-weight: bold;"
+							value="Pantalla 6" /></li>
+				</ul>
+			</div>
+		</div>
+		</nav>
+
+		<div class="main">		
+			<center>
+			<p:outputLabel value="#{EstructuraTejidoManagedBean.verAdelante}"></p:outputLabel>
+				<h3>
+					<ui:insert name="titulo-report">Titulo Reporte</ui:insert>
+				</h3>
+			</center>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading" style="font-weight: bold;">Filtro
+							de Búsqueda</div>
+						<div class="panel-body">
+							<h:form id="filtro" styleClass="form-horizontal">
+								<ui:insert name="insert-filtro">Titulo Reporte</ui:insert>
+							</h:form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</h:body>
+
+
+</f:view>
+</html>

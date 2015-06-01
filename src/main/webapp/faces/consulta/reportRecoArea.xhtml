@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/template1.xhtml">
+
+	<ui:define name="titulo-report">
+    	Reporte Recomendaciones Áreas Involucradas y Áreas Responsables
+    </ui:define>
+
+	<ui:define name="insert-filtro">
+		<div class="form-group has-feedback">
+			<label style="font-size: 13px;" class="col-sm-2 control-label">Al día</label>
+			<div class="col-sm-3">
+				<p:calendar style="font-size: 13px;" navigator="true" locale="es" id="saldoI" readonlyInput="true" showOn="button" pattern="dd/MM/yyyy" />
+			</div>
+			<label style="font-size: 13px;" class="col-sm-2 control-label">Área Responsable</label>
+			<div class="col-sm-3">
+				<h:selectOneMenu styleClass="form-control" id="areaR">
+					<f:selectItem itemLabel="Seleccionar" itemValue="0" />
+				</h:selectOneMenu>
+			</div>
+		</div>
+		<div class="form-group has-feedback">			
+			<label style="font-size: 13px;" class="col-sm-2 control-label">Empresa</label>
+			<div class="col-sm-3">
+				<h:selectOneMenu styleClass="form-control" id="empresa">
+					<f:selectItem itemLabel="Seleccionar" itemValue="0" />
+				</h:selectOneMenu>
+			</div>
+			<label style="font-size: 13px;" class="col-sm-2 control-label">Área Involucrada</label>
+			<div class="col-sm-3">
+				<p:selectCheckboxMenu styleClass="form-control" id="areaI2">
+            		<f:selectItem itemLabel="Seleccionar" itemValue="0" />
+            		<f:selectItem itemLabel="Seleccionar" itemValue="0" />
+            		<f:selectItem itemLabel="Seleccionar" itemValue="0" />
+        		</p:selectCheckboxMenu>
+			</div>
+		</div>
+		<div class="form-group has-feedback">
+			<label style="font-size: 13px;" class="col-sm-2 control-label">Gerencia</label>
+			<div class="col-sm-3">
+				<h:selectOneMenu styleClass="form-control" id="gerencia">
+					<f:selectItem itemLabel="Seleccionar" itemValue="0" />
+				</h:selectOneMenu>
+			</div>
+		</div>
+		
+		
+		
+		<div class="form-group has-feedback">
+			<label style="font-size: 13px;" class="col-sm-2 control-label" />
+			<div class="col-sm-3">
+				<p:commandButton value="Exportar" style="width: 100%;" styleClass="btn btn-primary" />
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>

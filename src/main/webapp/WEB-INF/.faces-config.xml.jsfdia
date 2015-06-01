@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="reporteEstado::#faces#consulta#reportRecoEstado.xhtml"
+    NAME="output" PATH="/faces/consulta/reportRecoEstado.xhtml"
+    TARGET="rules:#faces#consulta#reportRecoEstado.xhtml"
+    TITLE="reporteEstado" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="reporteFecha::#faces#consulta#reportRecoFecha.xhtml"
+    NAME="output1" PATH="/faces/consulta/reportRecoFecha.xhtml"
+    TARGET="rules:#faces#consulta#reportRecoFecha.xhtml"
+    TITLE="reporteFecha" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="reporteFechaImplementada::#faces#consulta#reportRecoFechaImp.xhtml"
+    NAME="output2" PATH="/faces/consulta/reportRecoFechaImp.xhtml"
+    TARGET="rules:#faces#consulta#reportRecoFechaImp.xhtml"
+    TITLE="reporteFechaImplementada" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="reporteAreaInvoclucrada::#faces#consulta#reportRecoArea.xhtml"
+    NAME="output3" PATH="/faces/consulta/reportRecoArea.xhtml"
+    TARGET="rules:#faces#consulta#reportRecoArea.xhtml"
+    TITLE="reporteAreaInvoclucrada" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="pantalla5::#faces#consulta#pantalla5.xhtml"
+    NAME="output4" PATH="/faces/consulta/pantalla5.xhtml"
+    TARGET="rules:#faces#consulta#pantalla5.xhtml" TITLE="pantalla5" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="pantalla6::#faces#consulta#pantalla6.xhtml"
+    NAME="output5" PATH="/faces/consulta/pantalla6.xhtml"
+    TARGET="rules:#faces#consulta#pantalla6.xhtml" TITLE="pantalla6" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#faces#consulta#reportRecoEstado.xhtml"
+  PATH="/faces/consulta/reportRecoEstado.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#faces#consulta#reportRecoFecha.xhtml"
+  PATH="/faces/consulta/reportRecoFecha.xhtml" SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#faces#consulta#reportRecoFechaImp.xhtml"
+  PATH="/faces/consulta/reportRecoFechaImp.xhtml" SHAPE="272,321,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#faces#consulta#reportRecoArea.xhtml"
+  PATH="/faces/consulta/reportRecoArea.xhtml" SHAPE="288,465,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#faces#consulta#pantalla5.xhtml"
+  PATH="/faces/consulta/pantalla5.xhtml" SHAPE="304,529,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#faces#consulta#pantalla6.xhtml"
+  PATH="/faces/consulta/pantalla6.xhtml" SHAPE="304,753,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

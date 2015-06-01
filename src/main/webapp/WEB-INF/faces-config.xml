@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+
+	<application>
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+	</application>
+
+	<!-- Navigation Rule: MENU -->
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>reporteEstado</from-outcome>
+			<to-view-id>/faces/consulta/reportRecoEstado.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>reporteFecha</from-outcome>
+			<to-view-id>/faces/consulta/reportRecoFecha.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>reporteFechaImplementada</from-outcome>
+			<to-view-id>/faces/consulta/reportRecoFechaImp.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>reporteAreaInvoclucrada</from-outcome>
+			<to-view-id>/faces/consulta/reportRecoArea.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>pantalla5</from-outcome>
+			<to-view-id>/faces/consulta/pantalla5.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>pantalla6</from-outcome>
+			<to-view-id>/faces/consulta/pantalla6.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

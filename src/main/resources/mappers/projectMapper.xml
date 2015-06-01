@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.jira.consulta.dao.ProjectDao">
+
+	<resultMap id="projectResult" type="CustomFieldOption">
+		<id property="intIdCustomFieldOption" 	column="ID" />
+		<result property="strCustomValue" 		column="customvalue" />
+	</resultMap>
+
+	<!-- <select id="getListProjectsByMap" statementType="CALLABLE"> {call SP_ESTRELAFOTO(#{result, 
+		jdbcType=CURSOR,javaType=java.sql.ResultSet,mode=OUT, resultMap=ImgResult}, 
+		#{estCliente}, #{codCliente})} </select> -->
+
+	<select id="getListProjectsByMap" resultMap="projectResult">
+		select ID, customvalue
+		from customfieldoption
+		where customfield in (10200)
+		order by 1
+	</select>
+
+</mapper>
